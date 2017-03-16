@@ -28,9 +28,10 @@
 				<section>
           <section data-markdown style="text-align: left;">
             <script type="text/template">
-              <br/><br/><br/>
+              <br/><br/>
               <h3>Software Capstone Design <br/>
-              Job Push Recommend System <br/>
+              Research Proposal: <br/></h3>
+              <h3>Job Push Recommend System <br/>
               ACM RecSys Challenge 2017 [(Link)](http://2017.recsyschallenge.com/)</h3>
 
               <p style="font-size: 30px">
@@ -78,7 +79,7 @@
           </section>
           <section data-state="header1-3" style="text-align: left;">
             <style>.header1-3 header:after { content: "Submission"; }</style>
-            <image src="img/submission.jpg"/>
+            <image src="img/submission.jpg" class="stretch"/>
             </p>
           </section>
         </section>
@@ -130,6 +131,10 @@
                 <p class="fragment" data-fragment-index="4">3. 이상학: SVM</p><br/>
                 <p class="fragment" data-fragment-index="5"> 이외의 추가적인 데이터 수집은 협업 </p>
                 <p class="fragment" data-fragment-index="6"> 이후 각각 모델의 장단점 분석 및 연구 </p>
+                <aside class="notes">
+                  a. 의사소통 비용
+                  b. 개개인에 대한 동기부여
+                </aside>
             </script>
           </section>
         </section>
@@ -148,31 +153,145 @@
             </script>
           </section>
         </section>
-        <section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-video-loop data-background-video-muted>
-            <h2>Video</h2>
+        <section>
+          <section data-state="header6" data-markdown style="text-align:left; left:2em">
+            <script type="text/template">
+              <style>.header6 header:after { content: "Models"; }</style>
+
+                <p> Nowadays we have plenty of machine learning models. Those most well-knowns are</p>
+                <p class="fragment" data-fragment-index="1">- Linear/Logistic Regression </p>
+                <p class="fragment" data-fragment-index="2">- k-Nearest Neighbours </p>
+                <p class="fragment" data-fragment-index="3">- Tree-based Model</p>
+                <p class="fragment" data-fragment-index="4">- Support Vector machines</p>
+                <p class="fragment" data-fragment-index="5">- Neural Networks</p>
+
+            </script>
+          </section>
         </section>
         <section>
-          <script type="text/template">
-            [![Little red ridning hood](http://i.imgur.com/7YTMFQp.png)](https://vimeo.com/3514904 "Little red riding hood - Click to Watch!")
-          </script>
+          <section data-markdown style="text-align:left; left:2em">
+            <script type="text/template">
+                ## XGBoost
+                #### Scalable and Flexible Gradient Boosting<br/><br/>
+
+            </script>
+          </section>
+          <section data-state="header7" data-markdown style="text-align:left; left:2em">
+            <script type="text/template">
+              <style>.header7 header:after { content: "XGBoost - Tree Ensemble"; }</style>
+
+              <p>Open-sourced tool</p>
+              <p class="fragment" data-fragment-index="1">- Computation in C++</p>
+              <p class="fragment" data-fragment-index="2">- R/python/Julia interface provided</p>
+              <br/>
+              <p class="fragment" data-fragment-index="3">A variant of the gradient boosting machine</p>
+              <p class="fragment" data-fragment-index="4">- Tree-based model</p>
+              <br/>
+              <p class="fragment" data-fragment-index="5">The winning model for several kaggle competitions</p>
+            </script>
+          </section>
+          <section data-state="header7" data-markdown style="text-align:left; left:2em">
+            <script type="text/template">
+              <style>.header7 header:after { content: "XGBoost - Tree Ensemble"; }</style>
+
+              <image src="img/xgboost1.jpg" style="width:85%; margin:auto;"/>
+            </script>
+          </section>
+          <section data-state="header7" data-markdown style="text-align:left; left:2em">
+            <script type="text/template">
+              <style>.header7 header:after { content: "XGBoost - Tree Ensemble"; }</style>
+
+              <image src="img/xgboost2.jpg" style="width:85%; margin:auto;"/>
+            </script>
+          </section>
         </section>
         <section>
-            <p class="fragment" data-fragment-index="3">Appears last</p>
-            <p class="fragment" data-fragment-index="1">Appears first</p>
-            <p class="fragment" data-fragment-index="2">Appears second</p>
-        </section>
-        <section>
-            <pre><code data-trim data-noescape>
-              (def lazy-fib
-                (concat
-                 [0 1]
-                 <mark>((fn rfib [a b]</mark>
-                      (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
-            </code></pre>
-        </section>
-        <section>
-            <h2>This video will use up the remaining space on the slide</h2>
-            <video class="stretch" src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></video>
+          <section data-markdown style="text-align:left; left:2em">
+            <script type="text/template">
+                ## SVM
+                #### Support Vector machine<br/><br/>
+
+            </script>
+          </section>
+          <section data-state="header7" data-markdown style="text-align:left; left:2em">
+            <script type="text/template">
+              <style>.header7 header:after { content: "SVM"; }</style>
+
+              <p>Linear classifiers: Which Hyperplane?</p>
+
+              <div style="width:100%;">
+                <div style="width:60%; float:left">
+                  <p class="fragment" data-fragment-index="1" style="font-size:0.8em">- Lots of possible solutions for a, b, c</p>
+                  <p class="fragment" data-fragment-index="2" style="font-size:0.8em">Some methods find a separating hyperplane, but not the optimal one</p>
+                  <p class="fragment" data-fragment-index="3" style="font-size:0.8em">- E.g., perceptron</p>
+                  <br/>
+                  <p class="fragment" data-fragment-index="4">Support Vector Machine (SVM) finds an optimal solution.</p>
+                </div>
+                <div style="width:40%; float:right">
+                  <image src="img/svm.jpg" style="width:75%; margin:auto;"/>
+                </div>
+              </div>
+
+            </script>
+          </section>
+          <section data-state="header7" data-markdown style="text-align:left; left:2em">
+            <script type="text/template">
+              <style>.header7 header:after { content: "SVM"; }</style>
+
+              <image src="img/svm1.jpg" style="width:85%; margin:auto;"/>
+              <aside class="notes">
+                서포트 벡터 머신은 인공지능의 기계학습 분야 중 하나로, 패턴인식, 자료분석을 위한 지도학습 모델이다.
+                즉, 2개의 범주를 분류하는 이진 분류기이다.
+
+                주로 분류와 회귀 분석을 위해 사용되며, SVM 알고리즘은 주어진 데이터 집합을 바탕으로 하여 새로운 데이터가 어느 카테고리에 속할 것인지 판단하는 비확률적 이진 선형 분류 모델을 만들게 된다.
+              </aside>
+            </script>
+          </section>
+          <section data-state="header7" data-markdown style="text-align:left; left:2em">
+            <script type="text/template">
+              <style>.header7 header:after { content: "SVM"; }</style>
+
+              <image src="img/svm2.jpg" style="width:85%; margin:auto;"/>
+              <aside class="notes">
+                예를들어 아래와 같은 데이터 집합이 들어왔다고 가정을 해보자.
+              </aside>
+
+            </script>
+          </section>
+          <section data-state="header7" data-markdown style="text-align:left; left:2em">
+            <script type="text/template">
+              <style>.header7 header:after { content: "SVM"; }</style>
+
+              <image src="img/svm3.jpg" style="width:85%; margin:auto;"/>
+              <aside class="notes">
+                이런 데이터 집합이 들어왔을 때, 두개의 집합으로 나누는 방법 중 하나는 아래 그림처럼 곡선 형태의 결정선을 구하여 가운데 집합을 잘라내어 구분하는 방법이다.
+              </aside>
+
+            </script>
+          </section>
+          <section data-state="header7" data-markdown style="text-align:left; left:2em">
+            <script type="text/template">
+              <style>.header7 header:after { content: "SVM"; }</style>
+
+              <image src="img/svm4.jpg" style="width:85%; margin:auto;"/>
+              <aside class="notes">
+                이러한 방법도 있고, 다른 방법은 직선으로 주어져 있던 입력샘플의 공간을 아래처럼 휘어진 공간으로 변형시키고 이전에 사용했던 직선으로 잘라내는 방법이다.
+                이 때 주어진 데이터를 고차원 특징 공간으로 사상하는 작업을 해주는 '커널 트릭'을 사용하는 것이다.
+              </aside>
+
+            </script>
+          </section>
+          <section data-state="header7" data-markdown style="text-align:left; left:2em">
+            <script type="text/template">
+              <style>.header7 header:after { content: "SVM"; }</style>
+
+              <image src="img/svm5.jpg" style="width:85%; margin:auto;"/>
+              <aside class="notes">
+                모든 조건을 바꾸면서 SVM의 학습과 예측을 반복해서 최적의 예측률을 보여주는 조건을 찾아야 한다
+              </aside>
+
+            </script>
+          </section>
         </section>
 			</div>
 		</div>
