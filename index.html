@@ -23,9 +23,157 @@
 	</head>
 	<body>
 		<div class="reveal">
+      <header style="position: absolute;top: 1em; left: 1em; z-index:500; font-size:1em;background-color: rgba(0,0,0,0.5)"></header>
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+          <section data-markdown style="text-align: left;">
+            <script type="text/template">
+              <br/><br/><br/>
+              <h3>Software Capstone Design <br/>
+              Job Push Recommend System <br/>
+              ACM RecSys Challenge 2017 [(Link)](http://2017.recsyschallenge.com/)</h3>
+
+              <p style="font-size: 30px">
+                Team name : <b>이건학</b> <br/>
+                (경제학과 <b>이지명</b>, 컴퓨터과학과 <b>이상학</b>, 컴퓨터과학과 <b>박건우</b>)
+              </p>
+              <aside class="notes">
+                노트
+              </aside>
+            </script>
+
+          </section>
+        </section>
+				<section>
+          <section data-state="header1-1" style="text-align: left;" data-markdown>
+            <script type="text/template">
+              <style>.header1 header:after { content: "Challenge Intro"; }</style>
+
+              <h4>ACM RecSys Challenge 2017 <a href="http://2017.recsyschallenge.com/">(Link)</a></h4>
+              <p style="font-size: 0.55em">
+                Job Push Recommend Challenge : <br/>
+                <u>XING.COM</u> 을 이용하는 유저들과, 아이템(job posting)을 매칭시켜주도록 하는 Data Analysis Challenge  <br/><br/>
+
+                <b>오프라인 대회</b>: 고정된 데이터셋과 고정된 타겟으로 진행 <br/>
+                <b>온라인 대회</b>: 동적으로 변화하는 타겟, 실제로 추천결과가 XING의 라이브 시스템에 반영 <br/><br/>
+
+                일정 <br/>
+                * 4월 16일 오프라인 대회 마감 (상위 20팀 온라인 대회 진출) <br/>
+                * 5월 01일 온라인 대회 시작<br/>
+                * 6월 04일 온라인 대회 마감<br/>
+              </p>
+            </script>
+          </section>
+          <section data-state="header1-2-1">
+            <style>.header1-2-1 header:after { content: "Dataset - Users"; }</style>
+            <image src="/img/users.jpg" class="stretch"/>
+          </section>
+          <section data-state="header1-2-2">
+            <style>.header1-2-2 header:after { content: "Dataset - Items"; }</style>
+            <image src="/img/items.jpg" class="stretch"/>
+          </section>
+          <section data-state="header1-2-3">
+            <style>.header1-2-3 header:after { content: "Dataset - Interactions"; }</style>
+            <image src="/img/interations.jpg" class="stretch"/>
+          </section>
+          <section data-state="header1-3" style="text-align: left;">
+            <style>.header1-3 header:after { content: "Submission"; }</style>
+            <image src="/img/submission.jpg"/>
+            </p>
+          </section>
+        </section>
+        <section>
+          <section data-state="header2" data-markdown>
+            <script type="text/template">
+              <style>.header2 header:after { content: "Goal"; }</style>
+
+              <p class="fragment" data-fragment-index="1">1. Data anaylsis experience</p>
+              <p class="fragment" data-fragment-index="2">2. Machine learning experience</p>
+              <p class="fragment" data-fragment-index="3">3. Get high rank in the competition</p>
+            </script>
+          </section>
+        </section>
+        <section>
+          <section data-state="header3" data-markdown>
+            <script type="text/template">
+              <style>.header3 header:after { content: "Feedback from Last Challenge"; }</style>
+
+              #### Customer Flow Prediction Challenge
+
+              <br/>
+
+              <p class="fragment" data-fragment-index="1">1. 머신러닝 베이스 부족</p>
+              <p class="fragment" data-fragment-index="2"> 1-a 학습 시간 소요</p>
+            </script>
+          </section>
+          <section data-state="header3" data-markdown>
+            <script type="text/template">
+              <style>.header3 header:after { content: "Feedback from Last Challenge"; }</style>
+
+              <p class="fragment" data-fragment-index="1">2. Teamwork 경험 부족</p>
+              <p class="fragment" data-fragment-index="2"> - 의사 소통 비용 발생</p>
+              <p class="fragment" data-fragment-index="3"> -> data feature 선택 - 코딩 - 결과 확인 중 time delay</p><br/>
+
+              <p class="fragment" data-fragment-index="4"> - 팀원들간 명확한 Role 분배 실패</p>
+              <p class="fragment" data-fragment-index="5"> -> 동기부여 부족</p>
+            </script>
+          </section>
+        </section>
+        <section>
+          <section data-state="header4" data-markdown style="text-align:left; left:2em">
+            <script type="text/template">
+              <style>.header4 header:after { content: "Method"; }</style>
+
+                <p class="fragment" data-fragment-index="1">프로젝트를 총 세개의 독립적인 프로젝트로 분할</p><br/>
+                <p class="fragment" data-fragment-index="2">1. 박건우: Keras with Entity Embedding</p>
+                <p class="fragment" data-fragment-index="3">2. 이지명: XGBoost</p>
+                <p class="fragment" data-fragment-index="4">3. 이상학: SVM</p><br/>
+                <p class="fragment" data-fragment-index="5"> 이외의 추가적인 데이터 수집은 협업 </p>
+                <p class="fragment" data-fragment-index="6"> 이후 각각 모델의 장단점 분석 및 연구 </p>
+            </script>
+          </section>
+        </section>
+        <section>
+          <section data-markdown>
+            <script type="text/template">
+              # Baseline
+              #### [(Link)](https://github.com/recsyschallenge/2017/tree/master/baseline)
+            </script>
+          </section>
+          <section data-state="header5" data-markdown>
+            <script type="text/template">
+              <style>.header5 header:after { content: "Baseline"; }</style>
+
+              <image src="/img/baseline.jpg" style="margin:auto; width:80%" />
+            </script>
+          </section>
+        </section>
+        <section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-video-loop data-background-video-muted>
+            <h2>Video</h2>
+        </section>
+        <section>
+          <script type="text/template">
+            [![Little red ridning hood](http://i.imgur.com/7YTMFQp.png)](https://vimeo.com/3514904 "Little red riding hood - Click to Watch!")
+          </script>
+        </section>
+        <section>
+            <p class="fragment" data-fragment-index="3">Appears last</p>
+            <p class="fragment" data-fragment-index="1">Appears first</p>
+            <p class="fragment" data-fragment-index="2">Appears second</p>
+        </section>
+        <section>
+            <pre><code data-trim data-noescape>
+              (def lazy-fib
+                (concat
+                 [0 1]
+                 <mark>((fn rfib [a b]</mark>
+                      (lazy-cons (+ a b) (rfib b (+ a b)))) 0 1)))
+            </code></pre>
+        </section>
+        <section>
+            <h2>This video will use up the remaining space on the slide</h2>
+            <video class="stretch" src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"></video>
+        </section>
 			</div>
 		</div>
 
